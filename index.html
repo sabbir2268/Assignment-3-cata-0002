@@ -2,47 +2,123 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nature's Platter</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nature's Platter</title>
 
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/cfc3905c15.js" crossorigin="anonymous"></script>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/cfc3905c15.js" crossorigin="anonymous"></script>
 
-    <!-- tailwind css cds -->
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <!-- tailwind css cds -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
-    <!-- custom tailwind -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        clifford: '#da373d',
-                    }
-                }
-            }
+  <!-- custome tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
         }
-    </script>
+      }
+    }
+  </script>
 
-    <!-- daisyUI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- for light theme -->
-    <script>
-        document.documentElement.setAttribute('data-theme', 'light');
-    </script>
 </head>
 
 <body>
-    <main>
-        
-    </main>
+  <!-- Header -->
+  <header class="bg-gradient-to-b from-[rgb(255,255,255)] to-[rgb(239,235,227)] flex flex-col gap-10 lg:gap-20">
+    <!-- navbar -->
+    <nav class="px-4 py-3 lg:px-34 lg:py-6 grid grid-cols-2 md:grid-cols-3 gap-5 justify-between">
+      <!-- logo -->
+      <div class="flex items-center justify-start">
+        <img src="c2-assets/logo-header.png" alt="logo of the brand">
+      </div>
+      <!-- links -->
+      <div class="hidden md:inline-flex flex items-center justify-end">
+        <ul class="flex gap-8 text-xl ">
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Service</a></li> 
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <!-- icons & btns -->
+      <div class="hidden md:inline-flex flex items-center justify-end gap-3">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-cart-arrow-down"></i>
+        <button class="px-[30px] py-[10px] rounded-lg border-green-600 border-2">Login</button>
+        <button class="px-[30px] py-[10px] rounded-lg bg-green-600">Register</button>
+      </div>
+      <!-- menu iocn for phone -->
+      <div class="flex items-center justify-end md:hidden">
+        <i class="fa-solid fa-bars text-green-600"></i>
+      </div>
+    </nav>
+    <!-- banner section -->
+    <section class="flex flex-col items-center justify-center gap-4 md:gap-8">
+      <h1 class="text-3xl md:text-[56px] text-center font-semibold px-5">Freshness <span class="text-green-600">You Can <br> Count</span> On, Prices You’ll Love!</h1>
+      <p class="text-[16px] md:text-xl px-7 sm:w-1/2 text-center opacity-[0.8]">Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we’ve got you covered every day!</p>
+      <img class="md:w-2/4" src="c2-assets/hero-vegetables.png" alt="">
+    </section>
+  </header>
 
+  <!-- Services Section -->
+   <section class="px-4 py-12 lg:p-34 grid gap-8 md:gap-12">
+    <h1 class="text-2xl md:text-4xl text-green-600 font-semibold">Services</h1>
+    <!-- service cart -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- cart 1 -->
+      <div class="bg-[#EFEBE3] flex flex-col p-8 rounded-lg items-center justify-center ">
+        <div class="bg-white rounded-full p-6 mb-5 md:mb-6 flex items-center justify-center">
+          <img src="c2-assets/service.png" alt="">
+        </div>
+        <h3 class="text-xl md:text-2xl font-semibold mb-[10px] md:mb-3">24/7 Service</h3>
+        <p class="text-[16px] md:text-xl font-light text-[#111111] opacity-[0.7] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <!-- cart 2 -->
+      <div class="bg-[#EFEBE3] flex flex-col p-8 rounded-lg items-center justify-center ">
+        <div class="bg-white rounded-full p-6 mb-5 md:mb-6 flex items-center justify-center">
+          <img src="c2-assets/service.png" alt="">
+        </div>
+        <h3 class="text-xl md:text-2xl font-semibold mb-[10px] md:mb-3">24/7 Service</h3>
+        <p class="text-[16px] md:text-xl font-light text-[#111111] opacity-[0.7] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <!-- cart 3 -->
+      <div class="bg-[#EFEBE3] flex flex-col p-8 rounded-lg items-center justify-center ">
+        <div class="bg-white rounded-full p-6 mb-5 md:mb-6 flex items-center justify-center">
+          <img src="c2-assets/service.png" alt="">
+        </div>
+        <h3 class="text-xl md:text-2xl font-semibold mb-[10px] md:mb-3">24/7 Service</h3>
+        <p class="text-[16px] md:text-xl font-light text-[#111111] opacity-[0.7] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+   </section>
 
+   <!-- product section -->
+   <section class="px-4 py-12 lg:p-34 grid gap-8 md:gap-12 bg-[#EFEBE3]">
+    <h1 class="text-2xl md:text-4xl text-green-600 font-semibold">Services</h1>
+    <!-- products -->
+    <div class="grid grid-cols-10">
+      <!-- offer porducts -->
+       <div class="bg-gradient-to-br from-green-600 to-green-100 pl-8 pt-12 rounded-lg col-span-4 grid gap-3 md:gap-5">
+        <h1>30% OFF</h1>
+        <p>Discover a World of treats, toys, and essentials handpicked for.</p>
+        <div>
+          <!-- btn -->
+           <div>
+             <button class="px-[30px] py-[10px] rounded-lg bg-white">Buy Now</button>
+           </div>
+           <div class="flex justify-end">
+            <img src="c2-assets/vegetable-offer.png" alt="">
+           </div>
+        </div>
+       </div>
+    </div>
+   </section>
+  
 
-                 
 </body>
 
 </html>
